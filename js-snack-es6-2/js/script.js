@@ -27,22 +27,22 @@ const team = [
 ];
 
 
-for (let x = 0; team.length; x++){
+for (let x = 0; x < team.length; x++){
 
     let randomNumber = Math.floor(Math.random()*100) + 1;
     team[x].punti = randomNumber;
-    team[x].falli = randomNumber;
+    team[x].falli_subiti = randomNumber;
 }
 console.log(team);
 
-const team2 = []
+const team2 = []  //cra nuovo array con la destruttturazione
 
 for (let x = 0; x < team.length; x++){
 
-    const{nome, falli} = team[x];
+    const{nome, falli_subiti} = team[x];
     team2[x] = {
         nome, 
-        falli
+        falli_subiti
     };
 }
 
