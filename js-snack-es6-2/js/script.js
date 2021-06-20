@@ -35,7 +35,7 @@ for (let x = 0; x < team.length; x++){
 }
 console.log(team);
 
-const team2 = []  //cra nuovo array con la destruttturazione
+const team2 = []  //crea nuovo array con la destruttturazione
 
 for (let x = 0; x < team.length; x++){
 
