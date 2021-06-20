@@ -3,8 +3,10 @@
 //Stampare in html in forma tabellare i dati relativi alle squadre
 //evidenziando in giallo la riga corrispondente alla squadra con più falli subiti
 
-let fuorigioco = "";
-const visualizzaVideo = document.getElementById("fuorigioco");
+//let fuorigioco = "";
+//const visualizzaVideo = document.getElementById("fuorigioco");
+
+let tableHTML = document.querySelector('.table-container');
 const team = [
     {
         nome: "Juve",
@@ -41,6 +43,28 @@ for (let i = 0; i < team.length; i++) {
 
 }
 console.log(plus_falli)
+
+for (let i = 0; i < team.length; i++){
+    const{ nome, punti_totalizzati, falli_subiti} = team[i];
+    if(team[i].falli_subiti < plus_falli){
+        tableHTML.innerHTML += `
+        <ul>
+            <li>${nome}</li>
+            <li>${punti_totalizzati}</li>
+            <li>${falli_subiti}</li>
+        </ul>` 
+    } else
+        tableHTML.innerHTML += `
+        <ul>
+            <li style = "background-color: yellow">${nome}</li>
+            <li style = "background-color: yellow">${punti_totalizzati}</li>
+            <li style = "background-color: yellow">${falli_subiti}</li>
+        </ul>
+        `
+ }
+   
+
+/*
 //stampa la lista, dove indichi nel caso dritto se la variabile falli-subiti è minore della variabile in cui hai salvato il maggior numero di ammonizioni
 for (let i = 0; i < team.length; i++){
     if(team[i].falli_subiti < plus_falli){
@@ -59,4 +83,4 @@ for (let i = 0; i < team.length; i++){
     }                                       
 }
 console.log(fuorigioco)
-visualizzaVideo.innerHTML = fuorigioco
+visualizzaVideo.innerHTML = fuorigioco*/
