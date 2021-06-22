@@ -6,7 +6,8 @@
 //let fuorigioco = "";
 //const visualizzaVideo = document.getElementById("fuorigioco");
 
-let tableHTML = document.querySelector('.table-container');
+const tableHTML = document.querySelector('.table-container');
+
 const team = [
     {
         nome: "Juve",

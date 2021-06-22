@@ -9,13 +9,16 @@
     list-style: none;
     display: flex;
 }
+.table-container ul  li{
+    flex-grow: 1;
+}
 .table-container ul:first-child{
     font-weight: bold;
 }
 
 .table-container ul li{
     border: 1px solid black;
-    flex-basis: 25%;
+    flex-basis: calc(100%/3);
     margin: 0;
     padding: 0;
 }
